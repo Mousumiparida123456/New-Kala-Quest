@@ -18,14 +18,14 @@ Login → Dashboard → Featured Crafts → Story Quest → Interactive Play →
 ### Home Page
 ![Home Page](docs/screenshots/home.png)
 
-### Play with Heritage
-![Play with Heritage](docs/screenshots/play-with-heritage.png)
-
 ### Featured Crafts
 ![Featured Crafts](docs/screenshots/featured-crafts.png)
 
 ### Quest Experience
 ![Quest Experience](docs/screenshots/quest.png)
+
+### Play with Heritage
+![Play with Heritage](docs/screenshots/play-with-heritage.png)
 
 ## What Kala Quest Does (At a Glance)
 Opens with a personalized dashboard featuring curated crafts and active learning quests
