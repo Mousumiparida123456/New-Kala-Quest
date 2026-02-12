@@ -3,10 +3,15 @@ import { ProductCard } from '@/components/product-card';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
-export default function MarketplacePage({ searchParams }: { searchParams?: { artisanId?: string } }) {
-  const artisanId = searchParams?.artisanId;
-  const displayedProducts = artisanId ? products.filter(p => p.artisanId === artisanId) : products;
-  const artisan = artisanId ? artisans.find(a => a.id === artisanId) : null;
+type MarketplacePageProps = {
+  searchParams?: Promise<{ artisanId?: string }>;
+};
+
+export default async function MarketplacePage({ searchParams }: MarketplacePageProps) {
+  const params = await searchParams;
+  const artisanId = params?.artisanId;
+  const displayedProducts = artisanId ? products.filter((p) => p.artisanId === artisanId) : products;
+  const artisan = artisanId ? artisans.find((a) => a.id === artisanId) : null;
 
   return (
     <div className="container mx-auto px-4 py-8 md:px-6 md:py-12">
@@ -21,19 +26,19 @@ export default function MarketplacePage({ searchParams }: { searchParams?: { art
         </p>
         {artisan && (
           <Button asChild variant="link" className="mt-4 text-accent hover:text-accent/80">
-            <Link href="/marketplace">← Back to All Crafts</Link>
+            <Link href="/marketplace">Back to All Crafts</Link>
           </Button>
         )}
       </div>
       {displayedProducts.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {displayedProducts.map(product => (
+          {displayedProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
       ) : (
         <div className="text-center">
-            <p className="text-lg text-foreground/80">No crafts found for this artisan yet.</p>
+          <p className="text-lg text-foreground/80">No crafts found for this artisan yet.</p>
         </div>
       )}
     </div>

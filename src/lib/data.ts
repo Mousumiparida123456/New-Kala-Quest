@@ -34,16 +34,16 @@ export type MysteryQuiz = {
   questions: QuizQuestion[];
 };
 
-export type Monument = {
+export type ArtFormStory = {
   id: string;
   name: string;
-  facts: string[];
+  story: string[];
 };
 
 export type StateInfo = {
   id: string;
   name: string;
-  monuments: Monument[];
+  artForms: ArtFormStory[];
 };
 
 export type JobOpportunity = {
@@ -121,196 +121,211 @@ export const jobOpportunities: JobOpportunity[] = [
 ];
 
 export const states: StateInfo[] = [
-    {
-        id: "state-up",
-        name: "Uttar Pradesh",
-        monuments: [
-          {
-            id: "mon-taj-mahal",
-            name: "Taj Mahal",
-            facts: [
-              "It was commissioned in 1632 by the Mughal emperor Shah Jahan to house the tomb of his favorite wife, Mumtaz Mahal.",
-              "The Taj Mahal changes color depending on the time of day and whether there is a moon at night.",
-              "The four minarets are tilted slightly outwards to protect the main tomb in case of an earthquake."
-            ],
-          },
-          {
-            id: "mon-fatehpur-sikri",
-            name: "Fatehpur Sikri",
-            facts: [
-              "It was the capital of the Mughal Empire for only about 10 years.",
-              "The city was abandoned due to a water shortage.",
-              "It is home to one of the largest mosques in India, the Jama Masjid."
-            ],
-          }
-        ]
-    },
-    {
-        id: "state-dl",
-        name: "Delhi",
-        monuments: [
-            {
-                id: "mon-qutub-minar",
-                name: "Qutub Minar",
-                facts: [
-                  "At 73 meters, it is the tallest brick minaret in the world.",
-                  "The iron pillar in the courtyard has stood for over 1,600 years without rusting.",
-                  "Its construction was started in 1193 by Qutab-ud-din Aibak but was completed by his successor, Iltutmish."
-                ],
-            },
-            {
-                id: "mon-humayuns-tomb",
-                name: "Humayun's Tomb",
-                facts: [
-                  "It was the first garden-tomb on the Indian subcontinent.",
-                  "It inspired several major architectural innovations, culminating in the construction of the Taj Mahal.",
-                  "It was built by Humayun's first wife, Empress Bega Begum."
-                ],
-            }
-        ]
-    },
-    {
-        id: "state-rj",
-        name: "Rajasthan",
-        monuments: [
-            {
-                id: "mon-hawa-mahal",
-                name: "Hawa Mahal",
-                facts: [
-                  "It has 953 windows, or 'jharokhas', which are intricately decorated.",
-                  "It was built so that the royal women could observe everyday life and festivals in the street below without being seen.",
-                  "It is built of red and pink sandstone."
-                ],
-            },
-            {
-                id: "mon-amer-fort",
-                name: "Amer Fort",
-                facts: [
-                  "The fort is known for its artistic Hindu style elements.",
-                  "It has a series of gates, and each has a unique name and architectural style.",
-                  "The Sheesh Mahal (Mirror Palace) inside the fort is world-renowned for its intricate mirror work."
-                ],
-            }
-        ]
-    },
-    {
-      id: "state-mh",
-      name: "Maharashtra",
-      monuments: [{
-        id: "mon-ajanta-ellora",
-        name: "Ajanta & Ellora Caves",
-        facts: [
-          "The Ajanta Caves are 30 rock-cut Buddhist cave monuments.",
-          "The Ellora Caves are one of the largest rock-cut monastery-temple cave complexes in the world, featuring Buddhist, Hindu and Jain monuments.",
-          "The Kailasa Temple at Ellora is the largest single monolithic rock excavation in the world."
+  {
+    id: "state-up",
+    name: "Uttar Pradesh",
+    artForms: [
+      {
+        id: "art-chikankari",
+        name: "Chikankari Embroidery",
+        story: [
+          "You enter an old Lucknow workshop where shadow-like stitches glow under a lamp.",
+          "A master artisan asks you to identify three classic stitches to unlock the next design.",
+          "As you complete the pattern, the cloth reveals floral motifs inspired by Mughal gardens."
         ],
-      }, {
-        id: "mon-gateway-of-india",
-        name: "Gateway of India",
-        facts: [
-          "It was built to commemorate the visit of King George V and Queen Mary to Mumbai.",
-          "The last British troops to leave India passed through the Gateway.",
-          "Its architecture is a blend of Indian and Saracenic styles."
+      },
+      {
+        id: "art-banarsi-weaving",
+        name: "Banarasi Silk Weaving",
+        story: [
+          "In Varanasi, a loom rhythm becomes your map through a weaving puzzle.",
+          "You choose zari motifs linked to stories of rivers, temples, and festivals.",
+          "Your final weave combines tradition and symbolism into a ceremonial drape."
         ],
-      }]
-    },
-    {
-      id: "state-tn",
-      name: "Tamil Nadu",
-      monuments: [{
-        id: "mon-meenakshi-temple",
-        name: "Meenakshi Temple",
-        facts: [
-          "The temple has 14 gopurams (gateway towers), each elaborately sculpted and painted.",
-          "It is dedicated to Meenakshi, a form of Parvati, and her consort, Sundareshwar, a form of Shiva.",
-          "The temple complex is believed to house over 33,000 sculptures."
+      }
+    ]
+  },
+  {
+    id: "state-dl",
+    name: "Delhi",
+    artForms: [
+      {
+        id: "art-zardozi",
+        name: "Zardozi Embroidery",
+        story: [
+          "Inside a royal-style atelier, you trace metallic thread trails across velvet.",
+          "Each clue teaches how gold and silver wire changed festive fashion in Delhi.",
+          "You finish by matching patterns to historic court-inspired garments."
         ],
-      }, {
-        id: "mon-brihadeeswara-temple",
-        name: "Brihadeeswara Temple",
-        facts: [
-          "It is one of the largest South Indian temples and an exemplary example of fully realized Dravidian architecture.",
-          "The temple's vimana (tower) is 66 meters high, one of the tallest in the world.",
-          "The Kumbam (the apex or the bulbous structure on the top) of the temple is carved out of a single rock and weighs around 80 tons."
+      },
+      {
+        id: "art-miniature",
+        name: "Mughal Miniature Painting",
+        story: [
+          "You discover tiny unfinished portraits in a forgotten studio journal.",
+          "To continue, you pick natural pigments and layered brush techniques.",
+          "The completed panel reveals how miniature art documented court life and poetry."
         ],
-      }]
-    },
-    {
-      id: "state-ka",
-      name: "Karnataka",
-      monuments: [{
-        id: "mon-hampi",
-        name: "Hampi",
-        facts: [
-          "Hampi was the capital of the Vijayanagara Empire in the 14th century.",
-          "The ruins are a UNESCO World Heritage Site, spread over 4,100 hectares.",
-          "It is famous for its stone chariot in the Vittala Temple complex."
+      }
+    ]
+  },
+  {
+    id: "state-rj",
+    name: "Rajasthan",
+    artForms: [
+      {
+        id: "art-phad",
+        name: "Phad Painting",
+        story: [
+          "A traveling storyteller asks you to arrange scenes on a long painted scroll.",
+          "Each correct sequence unlocks episodes of local heroic legends.",
+          "You conclude by narrating the full visual saga in traditional order."
         ],
-      }, {
-        id: "mon-mysore-palace",
-        name: "Mysore Palace",
-        facts: [
-          "It is the official residence of the Wadiyar dynasty and the seat of the Kingdom of Mysore.",
-          "The palace is illuminated with over 97,000 light bulbs on Sundays and public holidays.",
-          "It is a blend of Hindu, Mughal, Rajput, and Gothic styles of architecture."
+      },
+      {
+        id: "art-blue-pottery",
+        name: "Jaipur Blue Pottery",
+        story: [
+          "In a kiln room challenge, you combine quartz-based materials in the right sequence.",
+          "A glaze puzzle reveals the role of Persian influence in local craft evolution.",
+          "Your final piece emerges with signature cobalt and turquoise motifs."
         ],
-      }]
-    },
-    {
-      id: "state-kl",
-      name: "Kerala",
-      monuments: [{
-        id: "mon-kerala-backwaters",
-        name: "Kerala Backwaters",
-        facts: [
-          "They are a network of interconnected canals, rivers, lakes and inlets, a labyrinthine system of more than 900 km of waterways.",
-          "The backwaters are home to unique species of aquatic life including crabs, frogs and mudskippers, water birds such as terns, kingfishers.",
-          "Kettuvallams, or houseboats, are a popular way to experience the backwaters."
+      }
+    ]
+  },
+  {
+    id: "state-mh",
+    name: "Maharashtra",
+    artForms: [
+      {
+        id: "art-warli",
+        name: "Warli Painting",
+        story: [
+          "You follow geometric symbols on a mud-wall canvas to decode village rituals.",
+          "By matching circles, triangles, and lines, you build a complete harvest scene.",
+          "The final mural teaches how Warli art turns daily life into visual storytelling."
         ],
-      }]
-    },
-    {
-      id: "state-wb",
-      name: "West Bengal",
-      monuments: [{
-        id: "mon-victoria-memorial",
-        name: "Victoria Memorial",
-        facts: [
-          "It is a large marble building dedicated to the memory of Queen Victoria.",
-          "It is now a museum and a popular tourist destination under the auspices of the Ministry of Culture.",
-          "The Angel of Victory on top of the dome rotates with the wind."
+      },
+      {
+        id: "art-paithani",
+        name: "Paithani Weaving",
+        story: [
+          "A loom mystery asks you to pick peacock and lotus motifs in the right border layout.",
+          "You learn how silk and zari choices define ceremonial identity.",
+          "Your completed design mirrors the elegance of classic Paithani drapes."
         ],
-      }]
-    },
-    {
-      id: "state-gj",
-      name: "Gujarat",
-      monuments: [{
-        id: "mon-rani-ki-vav",
-        name: "Rani ki Vav",
-        facts: [
-          "It is an intricately constructed stepwell, a UNESCO World Heritage Site.",
-          "It was built as a memorial to an 11th-century king by his widowed queen.",
-          "It is designed as an inverted temple highlighting the sanctity of water."
+      }
+    ]
+  },
+  {
+    id: "state-tn",
+    name: "Tamil Nadu",
+    artForms: [
+      {
+        id: "art-tanjore",
+        name: "Tanjore Painting",
+        story: [
+          "You restore a damaged panel by selecting gold foil, gesso relief, and jewel tones.",
+          "Each clue explains devotional themes and icon placement rules.",
+          "The painting comes alive as you complete its layered sacred composition."
         ],
-      }]
-    },
-    {
-      id: "state-or",
-      name: "Odisha",
-      monuments: [{
-        id: "mon-konark-temple",
-        name: "Konark Sun Temple",
-        facts: [
-          "The temple is designed in the shape of a gigantic chariot with 24 wheels, pulled by seven horses.",
-          "The wheels of the temple are sundials which can be used to calculate time accurately.",
-          "It is also known as the Black Pagoda."
+      },
+      {
+        id: "art-bharatanatyam",
+        name: "Bharatanatyam",
+        story: [
+          "In a dance hall simulation, you sequence mudras to express emotion and narrative.",
+          "Rhythm prompts guide you through adavus and classical timing patterns.",
+          "The final performance reveals the storytelling grammar of this ancient form."
         ],
-      }]
-    }
+      }
+    ]
+  },
+  {
+    id: "state-ka",
+    name: "Karnataka",
+    artForms: [
+      {
+        id: "art-mysore-painting",
+        name: "Mysore Painting",
+        story: [
+          "You examine old sketch lines to identify hallmark soft colors and fine detailing.",
+          "A pigment puzzle introduces traditional preparation and layering methods.",
+          "Your final stroke completes a serene devotional composition."
+        ],
+      },
+      {
+        id: "art-yakshagana",
+        name: "Yakshagana",
+        story: [
+          "Backstage, you assemble costume pieces and face-paint symbols before curtain call.",
+          "Dialogue clues help you match characters from epic narratives.",
+          "The act ends with a dramatic fusion of music, dance, and storytelling."
+        ],
+      }
+    ]
+  },
+  {
+    id: "state-kl",
+    name: "Kerala",
+    artForms: [
+      {
+        id: "art-kathakali",
+        name: "Kathakali",
+        story: [
+          "A makeup-room challenge asks you to decode color symbolism for each character type.",
+          "You pair expressions with drum cues to drive the story forward.",
+          "The scene resolves with a full enactment of a mythic episode."
+        ],
+      }
+    ]
+  },
+  {
+    id: "state-wb",
+    name: "West Bengal",
+    artForms: [
+      {
+        id: "art-pattachitra-bengal",
+        name: "Bengal Pattachitra",
+        story: [
+          "You unroll painted scrolls and arrange frames into a sung narrative sequence.",
+          "Voice clues reveal how image and song combine in performance.",
+          "The final chant completes a portable story tradition passed across generations."
+        ],
+      }
+    ]
+  },
+  {
+    id: "state-gj",
+    name: "Gujarat",
+    artForms: [
+      {
+        id: "art-bandhani",
+        name: "Bandhani Tie-Dye",
+        story: [
+          "You solve a knot-tying puzzle to produce precise dot constellations.",
+          "Dye-timing clues show how patterns emerge through resist technique.",
+          "Your fabric opens into a vibrant map of regional identity."
+        ],
+      }
+    ]
+  },
+  {
+    id: "state-or",
+    name: "Odisha",
+    artForms: [
+      {
+        id: "art-pattachitra-odisha",
+        name: "Odisha Pattachitra",
+        story: [
+          "At a chitrakar workshop, you prepare natural colors from stone and plant sources.",
+          "A border-design challenge helps you frame mythological scenes correctly.",
+          "You complete a narrative panel in the style of temple-linked storytelling art."
+        ],
+      }
+    ]
+  }
 ];
-
-
 export const mysteryQuizzes: MysteryQuiz[] = [
   {
     id: "mystery-1",
@@ -597,3 +612,4 @@ export const products: Product[] = [
     artisanId: "artisan-14",
   },
 ];
+

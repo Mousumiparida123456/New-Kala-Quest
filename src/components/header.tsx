@@ -15,7 +15,7 @@ import { Skeleton } from "./ui/skeleton";
 
 const navItems = [
   { href: "/", label: "Home" },
-  { href: "/mystery-stories", label: "Mystery Stories & Fun Facts" },
+  { href: "/mystery-stories", label: "Mystery Stories & Art Forms" },
   { href: "/artisans", label: "Artisans" },
   { href: "/marketplace", label: "Marketplace" },
   { href: "/opportunities", label: "Opportunities" },
@@ -130,3 +130,4 @@ export function Header() {
     </header>
   );
 }
+
